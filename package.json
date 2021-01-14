@@ -14,9 +14,7 @@
     "enzyme-to-json": "^3.6.1",
     "fetch-mock": "^9.10.7",
     "gh-pages": "^3.1.0",
-    "husky": "^4.3.7",
     "nock": "^13.0.4",
-    "pretty-quick": "^3.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.1",
@@ -34,8 +32,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "precommit": "pretty-quick --staged"
+    "eject": "react-scripts eject"
   },
   "browserslist": {
     "production": [
@@ -50,6 +47,13 @@
     ]
   },
   "devDependencies": {
-    "prettier": "2.2.1"
+    "husky": "^4.3.7",
+    "prettier": "2.2.1",
+    "pretty-quick": "^3.1.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }
